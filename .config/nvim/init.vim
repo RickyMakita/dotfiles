@@ -73,3 +73,6 @@ set wildmode=list:longest,full
 set wrap
 " 検索時に最後まで移動したら最初に戻る
 set wrapscan
+" カラースキーム設定
+syntax on
+colorscheme desert
