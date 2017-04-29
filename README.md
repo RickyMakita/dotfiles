@@ -1,5 +1,5 @@
 # dotfiles
-# .zshrc
+### .zshrc
 ```
 export XDG_CONFIG_HOME=~/dotfiles/.config
 ```
