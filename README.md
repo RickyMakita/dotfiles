@@ -16,3 +16,4 @@ fi
 ```
 brew install the_silver_searcher
 ```
+- vimprocをビルド
