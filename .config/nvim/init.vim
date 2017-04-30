@@ -15,7 +15,6 @@ if dein#load_state('/Users/ricky/.cache/dein')
   call dein#add('/Users/ricky/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('Shougo/vimproc.vim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
@@ -23,7 +22,7 @@ if dein#load_state('/Users/ricky/.cache/dein')
   call dein#add('Yggdroot/indentLine')
   call dein#add('vim-airline/vim-airline')
   call dein#add('Shougo/unite.vim')
-
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -127,3 +126,26 @@ colorscheme monokai
 
 " nerdtreeショートカット
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+" Unite.vim
+" insert modeで開始
+let g:unite_enable_start_insert = 1
+
+" 大文字小文字を区別しない
+let g:unite_enable_ignore_case = 1
+let g:unite_enable_smart_case = 1
+
+" grep検索
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+
+" カーソル位置の単語をgrep検索
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+
+" grep検索結果の再呼出
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+
+" unite grep に ag(The Silver Searcher) を使う
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
