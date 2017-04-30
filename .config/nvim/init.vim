@@ -120,7 +120,7 @@ set wrap
 set wrapscan
 " カラースキーム設定
 syntax enable
-colorscheme monokai 
+colorscheme ayu
 """"""""""""""""""""""""""""""""""""
 " plugin settings
 """"""""""""""""""""""""""""""""""""
