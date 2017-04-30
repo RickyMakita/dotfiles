@@ -119,7 +119,7 @@ set wrap
 set wrapscan
 " カラースキーム設定
 syntax enable
-colorscheme desert 
+colorscheme monokai 
 """"""""""""""""""""""""""""""""""""
 " plugin settings
 """"""""""""""""""""""""""""""""""""
