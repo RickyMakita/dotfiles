@@ -12,3 +12,7 @@ fi
 ```
 ### dein script
 - ホームディレクトリに```.cache/dein```を作成
+### 検索
+```
+brew install the_silver_searcher
+```

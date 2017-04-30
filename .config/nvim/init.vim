@@ -15,6 +15,7 @@ if dein#load_state('/Users/ricky/.cache/dein')
   call dein#add('/Users/ricky/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
+  call dein#add('Shougo/vimproc.vim')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
