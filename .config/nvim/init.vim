@@ -19,6 +19,9 @@ if dein#load_state('/Users/ricky/.cache/dein')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('scrooloose/nerdtree')
   call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('Shougo/unite.vim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -115,6 +118,11 @@ set wrap
 " 検索時に最後まで移動したら最初に戻る
 set wrapscan
 " カラースキーム設定
-set t_Co=256
 syntax enable
 colorscheme desert 
+""""""""""""""""""""""""""""""""""""
+" plugin settings
+""""""""""""""""""""""""""""""""""""
+
+" nerdtreeショートカット
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
