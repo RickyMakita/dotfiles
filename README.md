@@ -10,3 +10,5 @@ if [ -f ~/.bashrc ] ; then
 . ~/.bashrc
 fi
 ```
+### dein script
+- ホームディレクトリに```.cache/dein```を作成
