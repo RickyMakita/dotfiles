@@ -119,8 +119,9 @@ set wrap
 " 検索時に最後まで移動したら最初に戻る
 set wrapscan
 " カラースキーム設定
-syntax enable
-colorscheme ayu
+set t_Co=256
+syntax on
+colorscheme moneyforward
 """"""""""""""""""""""""""""""""""""
 " plugin settings
 """"""""""""""""""""""""""""""""""""
