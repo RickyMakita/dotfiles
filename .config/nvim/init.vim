@@ -48,6 +48,8 @@ endif
 """""""""""""""""""""""""""""""""
 " jkをescに設定
 inoremap jk <Esc>
+" terminal modeでjkでコマンドモードに
+tnoremap <silent> jk <C-\><C-n>
 " 行番号を表示する
 set number
 " 改行時に自動でインデントを挿入
