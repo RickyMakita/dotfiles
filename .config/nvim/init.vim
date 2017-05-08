@@ -24,6 +24,8 @@ if dein#load_state('/Users/ricky/.cache/dein')
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/neocomplcache')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('slim-template/vim-slim')
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -125,7 +127,7 @@ colorscheme moneyforward
 """"""""""""""""""""""""""""""""""""
 
 " nerdtreeショートカット
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-n><C-e> :NERDTreeToggle<CR>
 " Unite.vim
 " insert modeで開始
 let g:unite_enable_start_insert = 1
@@ -163,6 +165,11 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : ''
     \}
+" vim-coffee-script
+" vimにcoffeeファイルタイプを認識させる
+au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
+" インデント設定
+autocmd FileType coffee    setlocal sw=2 sts=2 ts=2 et
 
 " Plugin key-mappings.
 inoremap <expr><C-g>     neocomplcache#undo_completion()
