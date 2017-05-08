@@ -46,10 +46,6 @@ endif
 """""""""""""""""""""""""""""""""
 " settings
 """""""""""""""""""""""""""""""""
-" jkをescに設定
-inoremap jk <Esc>
-" terminal modeでjkでコマンドモードに
-tnoremap <silent> jk <C-\><C-n>
 " 行番号を表示する
 set number
 " 改行時に自動でインデントを挿入
@@ -185,3 +181,22 @@ inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" keymap
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 入力モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+" jkをescに設定
+inoremap jk <Esc>
+vnoremap jk <Esc> 
+" terminal modeでjkでコマンドモードに
+tnoremap <silent> jk <C-\><C-n>
+" 行頭にカーソル移動
+noremap <C-a> 0
+" 行末にカーソル移動
+noremap <C-e> $
+" カーソル位置から行末まで削除
+nnoremap <C-k> d$
